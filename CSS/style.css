@@ -3,5 +3,23 @@ h1 {
 }
 
 body {
-    background-color: grey
+    background-color: #0B93F8
 }
+
+header {  
+    background-color: #0BF8D0;
+    background-size: cover;
+    height: 100px;
+}
+
+main { 
+    font-size: 30px;
+    display : flex;
+    align-items: center;
+    color: white;
+    font-family: verdana;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: space-between;
+}
+
