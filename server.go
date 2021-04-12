@@ -8,10 +8,12 @@ import (
 
 var t *template.Template
 var c *template.Template
+var d *template.Template
 
 func main() {
 	t = template.Must(template.ParseFiles("./HTML/index.html"))
-	c = template.Must(template.ParseFiles("./HTML/projet.html"))
+	c = template.Must(template.ParseFiles("./HTML/groupes.html"))
+	d = template.Must(template.ParseFiles("./HTML/inter.html"))
 
 	http.Handle("/stuff/", http.StripPrefix("/stuff", http.FileServer(http.Dir("CSS"))))
 	http.HandleFunc("/", home)
@@ -41,5 +43,5 @@ func getAscii(w http.ResponseWriter, req *http.Request) {
 	}{
 		Phrase: text,
 	}
-	c.ExecuteTemplate(w, "projet.html", l)
+	c.ExecuteTemplate(w, "groupes.html", l)
 }
