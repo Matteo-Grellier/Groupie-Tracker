@@ -15,7 +15,7 @@ func main() {
 	c = template.Must(template.ParseFiles("./HTML/groupes.html"))
 	d = template.Must(template.ParseFiles("./HTML/inter.html"))
 
-	http.Handle("/stuff/", http.StripPrefix("/stuff", http.FileServer(http.Dir("CSS"))))
+	http.Handle("/static/", http.StripPrefix("/static", http.FileServer(http.Dir("static"))))
 	http.HandleFunc("/", home)
 	http.HandleFunc("/ascii-art", getAscii)
 	http.ListenAndServe(":8080", nil)
