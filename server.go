@@ -16,6 +16,7 @@ func main() {
 	d = template.Must(template.ParseFiles("./HTML/inter.html"))
 
 	http.Handle("/static/", http.StripPrefix("/static", http.FileServer(http.Dir("static"))))
+	http.Handle("/JS/", http.StripPrefix("/JS", http.FileServer(http.Dir("JS"))))
 	http.HandleFunc("/", home)
 	http.HandleFunc("/ascii-art", getAscii)
 	http.ListenAndServe(":8080", nil)
