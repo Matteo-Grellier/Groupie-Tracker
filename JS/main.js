@@ -31,7 +31,7 @@ searchinput.addEventListener('keyup', function(){
     }
     document.getElementById("suggestions").innerHTML = suggestion;
 
-})
+});
 
 /* Yann */
 

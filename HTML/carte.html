@@ -5,13 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Script JS -->
+    <script src="/JS/carte.js"></script>
+
     <title>Site Web</title>
 </head>
 <body>
     
     <!-- Script JS -->
     <script src="/JS/main.js"></script>
+
+    <!-- BAR DE NAVIGATION  -->
+    <header> 
+        <div class="navbar" id="nav">
+            <a class="navbar__links" href="/HTML/index.html">
+                <img src="/static/hut.ico" alt=""> Accueil
+            </a>
+            <a href="/HTML/artist.html" class="navbar__links">
+                <img src="/static/music.ico" alt="">  Artist
+            </a>
+            <a href="/HTML/groupes.html" class="navbar__links"> Affichage des groupes</a>
+            <a href="/HTML/carte.html" class="navbar__links">
+                <img src="/static/map.ico" alt=""> Carte Interactive
+            </a>
+
+            <input class="input" id="searchInput" type="text" placeholder="Search..."/>
+            <button class="btn" type="submit">Search</button>
+            <div id="suggestions"></div>
+
+        </div> 
+
+   </header>
+
+   <!-- Carte interactive -->
+   
+   <div id="map"></div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 
 </body>
 </html>
