@@ -1,3 +1,4 @@
+{{define "indexPage"}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,9 @@
     <title>Site Web</title>
 </head>
 <body>
+    {{template "groupes"}}
+    {{template "carte"}}
+    {{template "artist"}}
     <!-- BAR DE NAVIGATION  -->
     <header> 
         <div class="navbar" id="nav">
@@ -47,3 +51,4 @@
 
 </body>
 </html>
+{{end}}
