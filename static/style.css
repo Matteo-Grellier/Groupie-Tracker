@@ -87,4 +87,14 @@ button {
     left: 15px;
 }
 
+/* Carte interactive */
+
+#map {
+    height: 750px;
+    width: 75%;
+    top: 15px;
+    left: 225px;
+  }
+
+
 
