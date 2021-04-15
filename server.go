@@ -1,47 +1,37 @@
 package main
 
 import (
-	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 )
 
-var t *template.Template
-var c *template.Template
-var d *template.Template
+type Page struct {
+	Title    string
+	Articles []string
+}
+
+func viewHandler(w http.ResponseWriter, r *http.Request) {
+	// Création d'une page
+	p := Page{"Titre de ma page", []string{"Item 1", "Item 2", "Item 3"}}
+
+	// Création d'une nouvelle instance de template
+	t := template.New("Label de ma template")
+
+	// Déclaration des fichiers à parser
+	t = template.Must(t.ParseFiles("HTML/index.html", "HTML/groupes.html"))
+
+	// Exécution de la fusion et injection dans le flux de sortie
+	// La variable p sera réprésentée par le "." dans le layout
+	// Exemple {{.}} == p
+	err := t.ExecuteTemplate(w, "indexPage", p)
+
+	if err != nil {
+		log.Fatalf("Template execution: %s", err)
+	}
+}
 
 func main() {
-	t = template.Must(template.ParseFiles("./HTML/index.html"))
-	c = template.Must(template.ParseFiles("./HTML/groupes.html"))
-	d = template.Must(template.ParseFiles("./HTML/inter.html"))
-
-	http.Handle("/static/", http.StripPrefix("/static", http.FileServer(http.Dir("static"))))
-	http.HandleFunc("/", home)
-	http.HandleFunc("/ascii-art", getAscii)
+	http.HandleFunc("/", viewHandler)
 	http.ListenAndServe(":8080", nil)
-
-}
-
-func home(w http.ResponseWriter, req *http.Request) {
-	if req.URL.Path != "/" {
-		fmt.Fprintf(w, "404 NOT FOUND")
-		return
-	}
-	t.Execute(w, "index.html")
-}
-
-func getAscii(w http.ResponseWriter, req *http.Request) {
-	if req.Method != "POST" {
-		http.Redirect(w, req, "/", http.StatusSeeOther)
-		return
-	}
-
-	text := req.FormValue("first")
-
-	l := struct {
-		Phrase string
-	}{
-		Phrase: text,
-	}
-	c.ExecuteTemplate(w, "groupes.html", l)
 }
