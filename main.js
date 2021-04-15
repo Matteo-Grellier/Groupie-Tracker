@@ -1,7 +1,0 @@
-/* Luke */
-
-/* Yann */
-
-/* Nicolas */
-
-/* Matteo */
