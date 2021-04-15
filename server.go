@@ -19,7 +19,7 @@ func viewHandler(w http.ResponseWriter, r *http.Request) {
 	t := template.New("Label de ma template")
 
 	// Déclaration des fichiers à parser
-	t = template.Must(t.ParseFiles("HTML/index.html", "HTML/groupes.html"))
+	t = template.Must(t.ParseFiles("HTML/index.html", "HTML/groupes.html", "HTML/artist.html", "HTML/carte.html"))
 
 	// Exécution de la fusion et injection dans le flux de sortie
 	// La variable p sera réprésentée par le "." dans le layout
