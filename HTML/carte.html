@@ -1,4 +1,4 @@
-{{define "carte"}}
+{{define "body"}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,30 +9,9 @@
     <title>Site Web</title>
 </head>
 <body>
-    <!-- BAR DE NAVIGATION  -->
-    <header> 
-        <div class="navbar" id="nav">
-            <a class="navbar__links" href="/HTML/index.html">
-                <img src="/static/hut.ico" alt=""> Accueil
-            </a>
-            <a href="/HTML/artist.html" class="navbar__links">
-                <img src="/static/music.ico" alt="">  Artist
-            </a>
-            <a href="/HTML/groupes.html" class="navbar__links"> Affichage des groupes</a>
-            <a href="/HTML/carte.html" class="navbar__links">
-                <img src="/static/map.ico" alt=""> Carte Interactive
-            </a>
-
-            <input class="input" id="searchInput" type="text" placeholder="Search..."/>
-            <button class="btn" type="submit">Search</button>
-            <div id="suggestions"></div>
-
-        </div> 
-
+    
     <!-- Script JS -->
     <script src="/JS/main.js"></script>
-
-   </header>
 
 </body>
 </html>
