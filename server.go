@@ -10,6 +10,8 @@ func main() {
 	http.HandleFunc("/", home)
 	http.HandleFunc("/artist", artist)
 	http.HandleFunc("/groupes", groupes)
+	http.HandleFunc("/carte", carte)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	http.ListenAndServe(":8080", nil)
 }
 
@@ -40,7 +42,7 @@ func groupes(w http.ResponseWriter, r *http.Request) {
 func artist(w http.ResponseWriter, r *http.Request) {
 
 	// Déclaration des fichiers à parser
-	t, err := template.ParseFiles("HTML/artist.html", "HTML/layout.html")
+	t, err := template.ParseFiles("HTML/layout.html", "HTML/artist.html", "HTML/navbar.html")
 
 	if err != nil {
 		log.Fatalf("Template execution: %s", err)
@@ -50,7 +52,7 @@ func artist(w http.ResponseWriter, r *http.Request) {
 }
 
 func carte(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("HTML/carte.html", "HTML/layout.html")
+	t, err := template.ParseFiles("HTML/layout.html", "HTML/carte.html", "HTML/navbar.html")
 
 	if err != nil {
 		log.Fatalf("Template execution: %s", err)

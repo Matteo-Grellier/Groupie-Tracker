@@ -24,9 +24,7 @@ searchinput.addEventListener('keyup', function(){
 
     if(input != '' ){
     result.forEach(resultItem => 
-            suggestion +=`
-                <div class="suggestion">${resultItem.name}</div>
-            `
+            suggestion +=`<div class="suggestion">${resultItem.name}</div>`
         )
     }
     document.getElementById("suggestions").innerHTML = suggestion;
