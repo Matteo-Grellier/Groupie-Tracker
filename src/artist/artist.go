@@ -1,4 +1,4 @@
-package artist
+package Artists
 
 import (
 	"html/template"
@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func artist(w http.ResponseWriter, r *http.Request) {
+func Artists(w http.ResponseWriter, r *http.Request) {
 
 	// Déclaration des fichiers à parser
 	t, err := template.ParseFiles("HTML/layout.html", "HTML/artist.html", "HTML/navbar.html")
