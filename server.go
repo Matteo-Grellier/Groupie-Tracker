@@ -39,18 +39,6 @@ func groupes(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, nil)
 }
 
-func artist(w http.ResponseWriter, r *http.Request) {
-
-	// Déclaration des fichiers à parser
-	t, err := template.ParseFiles("HTML/layout.html", "HTML/artist.html", "HTML/navbar.html")
-
-	if err != nil {
-		log.Fatalf("Template execution: %s", err)
-		return
-	}
-	t.Execute(w, nil)
-}
-
 func carte(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles("HTML/layout.html", "HTML/carte.html", "HTML/navbar.html")
 
