@@ -1,20 +1,14 @@
-/* Luke */
-// exemple :
+const loadData = artists => {
+    console.log(artists)
+}
 
-// recherche interactive
-const persons = [ // il faudra mettre les artist etc ...
+fetch("https://cors-anywhere.herokuapp.com/https://groupietrackers.herokuapp.com/api/artists")
+.then((response) => response.json())
+.then(loadData)
 
-    {name:'Luke', age: 18 },
-    {name:'Loic', age: 21 },
-    {name:'Yann', age: 19 },
-    {name:'Nicolas', age: 25 },
-    {name:'Matteo', age: 32 },
-    {name:'Paul', age: 20 },
-    {name:'Jeff', age: 12 }
-];
 
 const searchinput = document.getElementById('searchInput');
- 
+
 searchinput.addEventListener('keyup', function(){
     const input = searchinput.value;
 
@@ -22,7 +16,7 @@ searchinput.addEventListener('keyup', function(){
 
     let suggestion = '';
 
-    if(input != '' ){
+    if(input !=''){
     result.forEach(resultItem => 
             suggestion +=`
                 <div class="suggestion">${resultItem.name}</div>
@@ -32,9 +26,3 @@ searchinput.addEventListener('keyup', function(){
     document.getElementById("suggestions").innerHTML = suggestion;
 
 })
-
-/* Yann */
-
-/* Nicolas */
-
-/* Matteo */
