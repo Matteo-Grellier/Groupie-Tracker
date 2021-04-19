@@ -1,0 +1,25 @@
+{{ define "navbar" }}
+<header>
+    <div class="navbar" id="nav">
+        <div class="logo">
+            <img src="/static/images/gt.PNG" height="50" width="50"> Groupie Tracker</img>
+        </div>
+        <br>
+        <a href="/" class="navbar__links"> Accueil </a>
+        <a href="/artist" class="navbar__links"> Artist</a>
+        <a href="/groupes" class="navbar__links"> Affichage des groupes</a>
+        <a href="/carte" class="navbar__links"> Carte Interactive</a>
+
+    </div>
+
+    <div id="recherche">
+        <input class="input" id="searchInput" type="text" placeholder="Search..."/>
+        <button class="btn" type="submit">Search</button>
+        <div id="suggestions"></div>
+    </div>
+    <!-- Script JS -->
+    <script src="/static/JS/main.js"></script>
+    <script src="/static/JS/js.js"></script>
+
+</header>
+{{ end }}
