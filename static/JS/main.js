@@ -14,7 +14,8 @@ searchinput.addEventListener('keyup', (e) => {
 
 const loadCharacters = async () => {
     try {
-        const res = await fetch('https://cors-anywhere.herokuapp.com/https://groupietrackers.herokuapp.com/api/artists');
+        const res = await fetch('https://rawcdn.githack.com/akabab/superhero-api/0.2.0/api/all.json');
+        // 'https://cors-anywhere.herokuapp.com/https://groupietrackers.herokuapp.com/api/artists'
         groupesCharacters = await res.json();
         displayCharacters(groupesCharacters);
     } catch (err) {
@@ -28,7 +29,7 @@ const displayCharacters = (characters) => {
             return `
             <li class="character">
                 <h2>${character.name}</h2>
-                <img src="${character.image}"></img>
+                <img src="${character.images.sm}"></img>
             </li>
         `;
         })
