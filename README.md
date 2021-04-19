@@ -12,6 +12,9 @@
 ## Répartition des tâches
 
 Yann : Filtrage des groupes
+
 Luke : CSS du site, barre de recherche
+
 Nicolas : Récupération des données de l'api
+
 Matteo : Structure du projet, git, trello, plusieurs pages sur le site
