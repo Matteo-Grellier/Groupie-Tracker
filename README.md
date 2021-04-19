@@ -2,9 +2,11 @@
 
 ## Comment utiliser le projet
 
-### :warning: NECESSAIRE AVANT DE COMMENCER :warning
+### :warning: NECESSAIRE :warning:
 
 - Installer [go](https://golang.org/dl/go1.16.3.windows-amd64.msi)
+
+### :warning: NECESSAIRE :warning:
 
 1. Telecharger le projet sur ce lien <https://github.com/Matteo-Grellier/Groupie-Tracker/>, l'extraire dans un dossier
 2. Aller sur ce lien et cliquer sur <https://cors-anywhere.herokuapp.com/https://groupietrackers.herokuapp.com/api/artists> et cliquer sur ...
