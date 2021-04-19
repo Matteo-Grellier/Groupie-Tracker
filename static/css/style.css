@@ -2,32 +2,70 @@ h1 {
     color: black;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #0B93F8
+    background-color: blue;
+    position: relative;
+    min-height: 1000px;
 }
 
 /* Bar de navigation */
-
 header {  
-    background-color: #0BF8D0;
-    background-size: cover;
-    height: 130px;
-    font-size: 2rem;
-    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0,5;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700; 
+}
+
+header.sticky{
+    background: black;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: 0,5;
+}
+
+header.sticky .navbar__links{
+    background: linear-gradient(90deg, lightgray, gray,black);
+}
+
+header.sticky .navbar__links:hover {
+    background: linear-gradient(90deg, black, gray,lightgray);
 }
 
 #nav {
     position: relative;
-   top: 40px;
+    display: flex;
 }
 
-.navbar__links {
-    color: #fff;
-    justify-content: center;
+.navbar__links { 
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    margin-top: 100px;
+    border-radius: 12px;
+    padding:10px 30px;
     text-decoration: none;
-    align-items: center;
-    padding:0 3rem;
-}
+    margin-left: 60px;
+ } 
+
+.navbar__links:hover {
+} 
 
 
 /* Bar de recherche */
@@ -42,7 +80,7 @@ input {
 button {
     color: #fff;
     padding: 14px 19px;
-    border: none;
+    border-color: white;
     background-color: black;
     font-size: 12px;
     border-radius: 12px;
@@ -52,7 +90,8 @@ button {
 }
 
 #recherche{
-    position: relative; 
+    position: fixed;
+    top: 80px;
     left: 1300px;
 
 }
@@ -72,7 +111,14 @@ button {
 /* Block entier */
 
 #ToutLeBlock {
-
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(/static/images/band.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -80,7 +126,7 @@ button {
 
 .block {
     display: inline-block;
-    background: yellow;
+    background: blue;
     width: 50%;
     height: 500px;
     color: black;
@@ -94,7 +140,7 @@ button {
 /* Block de droite */
 .block2 {
     display: inline-block;
-    background: greenyellow;
+    background: pink;
     width: 49%;
     height: 500px;
     color: black;
@@ -111,7 +157,7 @@ button {
 #map {
     height: 750px;
     width: 75%;
-    top: 15px;
+    top: 250px;
     left: 225px;
   }
 
