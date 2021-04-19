@@ -11,14 +11,14 @@ body {
 header {  
     background-color: #0BF8D0;
     background-size: cover;
-    height: 120px;
+    height: 130px;
     font-size: 2rem;
     padding: 0 50px;
 }
 
 #nav {
     position: relative;
-   top: 20px;
+   top: 40px;
 }
 
 .navbar__links {
@@ -26,15 +26,16 @@ header {
     justify-content: center;
     text-decoration: none;
     align-items: center;
-    padding:0 2rem;
+    padding:0 3rem;
 }
 
+
+/* Bar de recherche */
+
 input {
-    border-radius: 12px;
     padding: 15px 20px;
     border: none;
     font-size: 18px;
-    border-radius: 12px;
     outline: none;
 }
 
@@ -48,6 +49,24 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
+}
+
+#recherche{
+    position: relative; 
+    left: 1300px;
+
+}
+
+#suggestions {
+    font-size: 20px;
+    width: 14.35%;
+    background-color: #fff;
+
+}
+
+#suggestions:hover {
+    background-color: blue;
+    color: #fff;
 }
 
 /* Block entier */
@@ -86,5 +105,15 @@ button {
     top: 10px;
     left: 15px;
 }
+
+/* Carte interactive */
+
+#map {
+    height: 750px;
+    width: 75%;
+    top: 15px;
+    left: 225px;
+  }
+
 
 
