@@ -1,6 +1,7 @@
 package main
 
 import (
+	api "Groupie-Tracker/src/API"
 	artist "Groupie-Tracker/src/artist"
 	carte "Groupie-Tracker/src/carte"
 	groupe "Groupie-Tracker/src/groupes"
@@ -9,6 +10,7 @@ import (
 )
 
 func main() {
+	api.LoadAPI()
 	http.HandleFunc("/", home.Home)
 	http.HandleFunc("/artist", artist.Artists)
 	http.HandleFunc("/groupes", groupe.Groupes)
