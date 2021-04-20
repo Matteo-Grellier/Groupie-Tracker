@@ -9,7 +9,7 @@ h1 {
 }
 
 body {
-    background-color: blue;
+    background-color: gray;
     position: relative;
     min-height: 1000px;
 }
@@ -161,5 +161,45 @@ button {
     left: 225px;
   }
 
+  /* Tableau page groupe */
+
+.tableau {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+    margin-top: 250px;
+}
+
+#charactersList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+.character {
+    list-style-type: none;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        'name image';
+    text-align: left;
+}
+
+
+.character > h2 {
+    grid-area: name;
+    margin-bottom: 0px;
+}
+
+.character > img {
+    max-height: 100px;
+    grid-area: image;
+}
 
 
