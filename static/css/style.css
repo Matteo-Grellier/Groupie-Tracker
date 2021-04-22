@@ -203,3 +203,17 @@ button {
 }
 
 
+svg { 
+	display: inline-block; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	z-index: 1; 
+} 
+.vague { 
+	display: inline-block; 
+	position: absolute; 
+	width: 100%; 
+	top: 0; 
+	left: 0; 
+} 
