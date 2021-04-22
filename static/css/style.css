@@ -30,7 +30,9 @@ header {
 
 header .logo {
     color: #fff;
+    margin-top: 30px;
     font-weight: 700; 
+    font-size: 30px;
 }
 
 header.sticky{
@@ -58,11 +60,11 @@ header.sticky .navbar__links:hover {
     color: white;
     background-color: black;
     font-size: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
     border-radius: 12px;
-    padding:10px 30px;
+    padding:15px 40px;
     text-decoration: none;
-    margin-left: 60px;
+    margin-left: 150px;
  } 
 
 .navbar__links:hover {
@@ -76,13 +78,14 @@ header.sticky .navbar__links:hover {
 input {
     padding: 15px 20px;
     border: none;
+    width: 500px;
     font-size: 18px;
     outline: none;
 }
 
 button {
     color: #fff;
-    padding: 14px 19px;
+    padding: 17px 22px;
     border-color: white;
     background-color: black;
     font-size: 12px;
@@ -93,9 +96,8 @@ button {
 }
 
 #recherche{
-    position: fixed;
-    top: 80px;
-    left: 1300px;
+    position: relative;
+    text-align: center;
 
 }
 
@@ -157,12 +159,33 @@ button {
 
 /* Carte interactive */
 
-#map {
+.map {
+    position: fixed;
     height: 750px;
-    width: 75%;
+    width: 76.30%;
     top: 250px;
     left: 225px;
   }
+
+  
+.bande {
+    position: fixed;
+    background: url(/static/images/galaxy.jpg);
+    top: 250px;
+    height: 750px;
+    width: 225px;
+    
+}
+
+.bande2 {
+    position: fixed;
+    background: url(/static/images/galaxy.jpg);
+    top: 250px;
+    height: 750px;
+    width: 225px;
+    right: 0px;
+    
+}
 
   /* Tableau page groupe */
 
@@ -171,7 +194,7 @@ button {
     margin: 0 auto;
     max-width: 1000px;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 175px;
 }
 
 #charactersList {
@@ -206,3 +229,4 @@ button {
 }
 
 
+/* Bande carte */
