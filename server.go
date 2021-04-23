@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	api.LoadAPI()
+	http.HandleFunc("/api", api.LoadAPI)
 	http.HandleFunc("/", home.Home)
 	http.HandleFunc("/artist", artist.Artists)
 	http.HandleFunc("/groupes", groupe.Groupes)
