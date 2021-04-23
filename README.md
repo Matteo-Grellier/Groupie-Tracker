@@ -13,7 +13,7 @@
 2. Ouvrir un terminal dans le dossier du projet
 3. Ecrire la commande ``go run server.go`` comme ci-dessous
 ![img](static\images\IMG_Readme\gorun.gif)
-1. Ecrire cette ligne ``http://localhost:8080`` dans l'url comme ceci ![img](static\images\IMG_Readme\URL.gif)
+4. Ecrire cette ligne ``http://localhost:8080`` dans l'url comme ceci ![img](static\images\IMG_Readme\URL.gif)
 
 ## Répartition des tâches
 
