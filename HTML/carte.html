@@ -1,13 +1,32 @@
 {{define "body"}}
     
+    <head>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    </head>
+  
     <!-- Script JS -->
     <script src="/static/JS/carte.js"></script>
+
+
    <!-- Carte interactive -->
    
-   <div id="map"></div>
+   <div id="map" class="map"></div>
 
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
       async
     ></script>
+
+    <!-- bande sur le coté de la carte -->
+
+    <div class="bande" id="bande">
+      LIEU
+    </div>
+
+    <div class="bande2" id="bande2">
+      CONCERT
+    </div>
+
+
 {{end}}
