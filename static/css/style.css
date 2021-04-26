@@ -142,6 +142,7 @@ button {
     top: 10px;
  }
 
+
 /* Block de droite */
 .block2 {
     display: inline-block;
@@ -155,6 +156,36 @@ button {
     position: relative;
     top: 10px;
     left: 15px;
+}
+
+/* Block de trois */
+.block3 {
+    display: inline-block;
+    background: red;
+    width: 50%;
+    height: 500px;
+    color: black;
+}
+
+#trois {
+    position: relative;
+    top: 25px;
+    left: 30px;
+}
+
+/* Block de quatre */
+.block4 {
+    display: inline-flex;
+    background: yellow;
+    width: 50%;
+    height: 500px;
+    color: black;
+}
+
+#quatre {
+    position: relative;
+    top: 25px;
+    left: 30px;
 }
 
 /* Carte interactive */
@@ -228,8 +259,7 @@ button {
     grid-area: image;
 }
 
-
-<<<<<<< HEAD
+  /* la */
 svg { 
 	display: inline-block; 
 	position: absolute; 
@@ -244,6 +274,3 @@ svg {
 	top: 0; 
 	left: 0; 
 } 
-=======
-/* Bande carte */
->>>>>>> f57c20f71755d93d015859c0d4ac99ea9c46de26
