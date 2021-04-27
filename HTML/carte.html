@@ -3,6 +3,7 @@
     <head>
       <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
       <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
   
     <!-- Script JS -->
@@ -20,13 +21,23 @@
 
     <!-- bande sur le coté de la carte -->
 
-    <div class="bande" id="bande">
-      LIEU
+    <div class="bande1" id="bande1">
+      <div class="texte1">LIEU</div>
     </div>
 
     <div class="bande2" id="bande2">
-      CONCERT
+      <div class="texte2">CONCERT</div>
     </div>
+
+    <div id="search_location">
+      <input id="address" type="textbox" placeholder="Search concert..." />
+      <button id="submit" type="submit" value="Search" >Search</button>
+    </div>
+    <div id="concert"> List of concerts</div>
+
+
+    <script src="/static/JS/carte.js"></script>
+
 
 
 {{end}}

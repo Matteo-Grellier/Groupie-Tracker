@@ -14,7 +14,7 @@ searchinput.addEventListener('keyup', (e) => {
 
 const loadCharacters = async () => {
     try {
-        const res = await fetch('https://cors-anywhere.herokuapp.com/https://groupietrackers.herokuapp.com/api/artists');
+        const res = await fetch('/api');
         groupesCharacters = await res.json();
         displayCharacters(groupesCharacters);
     } catch (err) {

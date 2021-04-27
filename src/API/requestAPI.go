@@ -19,5 +19,5 @@ func LoadAPI(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
-	w.Write(respData)
+	w.Write(respData) /// permet de l'ecrire dans le header
 }
