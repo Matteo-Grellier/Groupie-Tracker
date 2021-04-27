@@ -159,6 +159,7 @@ button {
 }
 
 /* Block de trois */
+/* Block de trois */
 .block3 {
     display: inline-block;
     background: red;
@@ -169,8 +170,8 @@ button {
 
 #trois {
     position: relative;
-    top: 25px;
-    left: 30px;
+    top: 600px;
+    right: 690px;
 }
 
 /* Block de quatre */
@@ -184,9 +185,11 @@ button {
 
 #quatre {
     position: relative;
-    top: 25px;
-    left: 30px;
+    top: 600px;
+    right: 680px;
+
 }
+
 
 /* Carte interactive */
 
