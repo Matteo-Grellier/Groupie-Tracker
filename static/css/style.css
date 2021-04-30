@@ -118,14 +118,13 @@ button {
 #ToutLeBlock {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 300vh;
     background: url(/static/images/band.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 /* Block gauche */
 
@@ -138,8 +137,10 @@ button {
 }
 
 #un {
-    position: relative;
-    top: 10px;
+    position: absolute;
+    top: 6%;
+    bottom: 10%;
+    right: 50%;
  }
 
 
@@ -153,13 +154,14 @@ button {
 }
 
 #deux {
-    position: relative;
-    top: 10px;
-    left: 15px;
+    position: absolute;
+    top: 6%;
+    bottom: 10%;
+    left: 51%;
 }
 
 /* Block de trois */
-/* Block de trois */
+
 .block3 {
     display: inline-block;
     background: red;
@@ -169,9 +171,10 @@ button {
 }
 
 #trois {
-    position: relative;
-    top: 600px;
-    right: 690px;
+    position: absolute;
+    top: 25%;
+    bottom: 10%;
+    right: 50%;
 }
 
 /* Block de quatre */
@@ -184,10 +187,10 @@ button {
 }
 
 #quatre {
-    position: relative;
-    top: 600px;
-    right: 680px;
-
+    position: absolute;
+    top: 29%;
+    bottom: 10%;
+    left: 51%;
 }
 
 
@@ -263,17 +266,11 @@ button {
 }
 
   /* la */
-svg { 
-	display: inline-block; 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	z-index: 1; 
-} 
-.vague { 
-	display: inline-block; 
-	position: absolute; 
-	width: 100%; 
-	top: 0; 
-	left: 0; 
-} 
+.custom-shape-divider-top-1619682806 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
