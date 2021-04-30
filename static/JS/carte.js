@@ -8,6 +8,10 @@ function initMap() {
     zoom: 8,
   });
 
+  const geocoder = new google.maps.Geocoder();
+  document.getElementById("submit").addEventListener("click", () => {
+    geocodeAddress(geocoder, map);
+  });
 
   // permet de marqué les markers
   const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -30,7 +34,21 @@ function initMap() {
 // les coordonnées d'où sont placés les markers
 const locations = [
   { lat: 47.21257651938386, lng: -1.5545689756191343}, 
-  { lat:  47.25010637451308, lng: -1.520823648724015 },   
+  { lat:  47.25010637451308, lng: -1.520823648724015 }, 
+  { lat:  47.22434944289329, lng: -1.62313012459583},
 ];
 
-
+function geocodeAddress(geocoder, resultsMap) {
+  const address = document.getElementById("address").value;
+  geocoder.geocode({ address: address }, (results, status) => {
+    if (status === "OK") {
+      resultsMap.setCenter(results[0].geometry.location);
+      new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location,
+      });
+    } else {
+      alert("Could not find adress: " + status);
+    }
+  });
+}

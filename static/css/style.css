@@ -198,20 +198,29 @@ button {
 
 .map {
     position: fixed;
-    height: 750px;
-    width: 76.30%;
+    height: 690px;
+    width: 45%;
     top: 250px;
-    left: 225px;
+    left: 110px;
+    border-radius: 12px;
   }
 
   
-.bande {
+.bande1 {
     position: fixed;
     background: url(/static/images/galaxy.jpg);
     top: 250px;
     height: 750px;
-    width: 225px;
+    width: 100px;
     
+}
+
+.bande1 .texte1 {
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 80px;
+    margin-top: 200px;
 }
 
 .bande2 {
@@ -219,12 +228,45 @@ button {
     background: url(/static/images/galaxy.jpg);
     top: 250px;
     height: 750px;
-    width: 225px;
+    width: 100px;
     right: 0px;
     
 }
 
-  /* Tableau page groupe */
+.bande2 .texte2 {
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 80px;
+    margin-top: 80px;
+}
+
+#search_location {
+    position: fixed;
+    top: 250px;
+    width: 20%;
+    left: 1000px;
+    border-radius: 12px;
+
+}
+
+#concert {
+    position: fixed;
+    background-color: #fff;
+    padding: 17px 22px;
+    border-color: black;
+    font-size: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    outline: none;
+    width: 35%;
+    height: 500px;
+    top: 400px;
+    margin-left: 1000px;
+
+}
+
+/* Tableau page groupe */
 
 .tableau {
     padding: 40px;
@@ -265,6 +307,7 @@ button {
     grid-area: image;
 }
 
+<<<<<<< HEAD
   /* la */
 .custom-shape-divider-top-1619682806 {
     position: absolute;
@@ -274,3 +317,5 @@ button {
     overflow: hidden;
     line-height: 0;
 }
+=======
+>>>>>>> f621177839196bec53306eadc5fa0c2cf63d40bf
