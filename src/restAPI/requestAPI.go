@@ -12,9 +12,10 @@ import (
 const JSON string = "https://groupietrackers.herokuapp.com/api/artists"
 
 type Groupe struct {
-	ID    int    `json:"id"`
-	Image string `json:"image"`
-	Name  string `json:"name"`
+	ID           int    `json:"id"`
+	Image        string `json:"image"`
+	Name         string `json:"name"`
+	CreationDate int    `json:"creationDate"`
 }
 
 type PageDataGroupe struct {
