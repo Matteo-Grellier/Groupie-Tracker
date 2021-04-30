@@ -1,56 +1,75 @@
-
-const searchinput = document.getElementById('searchInput');
-let groupesCharacters = [];
-
-searchinput.addEventListener('keyup', (e) => {
-    const searchString = e.target.value.toLowerCase();
-    const filteredGroupes = groupesCharacters.filter((artist) => {
-        return (
-            artist.name.includes(searchString)
-        );
-    });
-    displayCharacters(filteredGroupes);
-});
-
-const loadCharacters = async () => {
-    try {
-        const res = await fetch('/api');
-        groupesCharacters = await res.json();
-        displayCharacters(groupesCharacters);
-    } catch (err) {
-        console.error(err);
-    }
-};
-
-const displayCharacters = (characters) => {
-    const htmlString = characters
-        .map((character) => {
-            return `
-            <li class="character">
-                <h2>${character.name}</h2>
-                <img src="${character.image}"></img>
-            </li>
-        `;
+export function display() {
+    fetch('/api')
+        .then(function (response) {
+            return response.json();
         })
-        .join('');
-    charactersList.innerHTML = htmlString;
-};
+        .then(function (data) {
+            sessionStorage.setItem('datasave', data)
+            document.getElementById("nuke").onclick = function () {
+                document.location.reload()
+                sessionStorage.clear()
+            }
+            document.getElementById("srch").onclick = function () {
+                srch(data)
+            };
+            appendData(data);
 
-searchinput.addEventListener('keyup', function(){
-    
-    const input = searchinput.value.toLowerCase();
+        })
 
-    const result = groupesCharacters.filter(item => item.name.toLowerCase().includes(input.toLowerCase()));
+    function appendData(heroes) {
+        let table = document.getElementById("tab");
+        let row = table.insertRow();
+        var row1 = table.insertRow();
+        // Mise en place du nombre de page par défaut qui est de 20
+        for (let i = 0; i < heroes.length; i++) { // on va parcourir le tableau d'hero
+            // on creer une variable qui va prendre pour information tout ce qui ce trouve dans l'id "tab" // on creer un tableau
+            let cell = row.insertCell();
 
-    let suggestion = '';
+            console.log("tourne");
+            if (i === 10) {
+                cell = row1.insertCell();
+                cell.innerHTML = heroes[i].name;
 
-    if(input !=''){
-    result.forEach(resultItem => 
-            suggestion +=`<div class="suggestion">${resultItem.name}</div>`
-        )
+            }
+
+            cell.innerHTML = heroes[i].name;
+        }
+
     }
-    document.getElementById("suggestions").innerHTML = suggestion;
-
-})
-
-loadCharacters();
+}
+export function srch(heroes) {
+    let research = document.getElementById("searchInput").value;
+    let search = new RegExp(research);
+    let finded = []
+    let valid = []
+    console.log(research)
+    for (let i = 0; i < heroes.length; i++) {
+        valid.push(false)
+        for (const property in heroes[i]) {
+            if (typeof heroes[i][property] == 'object') {
+                for (const subproperty in heroes[i][property]) {
+                    if (typeof heroes[i][property][subproperty] == 'object') {
+                        for (const sublist in heroes[i][property][subproperty]) {
+                            if (search.test(heroes[i][property][subproperty][sublist]) == true) {
+                                valid[i] = true
+                            }
+                        }
+                    } else {
+                        if (search.test(heroes[i][property][subproperty]) == true) {
+                            valid[i] = true
+                        }
+                    }
+                }
+            } else {
+                if (search.test(heroes[i][property]) == true) {
+                    valid[i] = true
+                }
+            }
+        }
+        if (valid[i] == true) {
+            finded.push(heroes[i])
+        }
+    }
+    finded = JSON.stringify(finded)
+    sessionStorage.setItem("data", finded)
+}
