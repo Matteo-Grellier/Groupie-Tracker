@@ -12,19 +12,21 @@
       <div id="suggestions"></div>
    </div>
 </form>
-
-<div id="myData"></div>
 <script type="module">
-   import { display } from '/static/JS/main.js'
-   display()
+   import { sortTable, clickEvent } from '../static/JS/tri.js'
+   clickEvent()
 </script>
+<div id="myData"></div>
+<button type="button" id="btn" >sort</button>
 {{ if .Groupes }}
-<table>
+<table id="tab">
    {{range .Groupes}}
    <tr>
-      <td>{{.ID}}</td>
+      <td>{{.Name}} {{.CreationDate}}</td>
    </tr>
    {{end}}
 </table>
+
+
 {{end}}
 {{end}}
