@@ -1,10 +1,10 @@
 package main
 
 import (
-	api "Groupie-Tracker/src/api"
 	artist "Groupie-Tracker/src/artist"
 	carte "Groupie-Tracker/src/carte"
 	home "Groupie-Tracker/src/home"
+	api "Groupie-Tracker/src/restAPI"
 	"net/http"
 )
 
