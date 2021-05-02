@@ -28,7 +28,11 @@ export function display() {
             console.log("tourne");
             if (i === 10) {
                 cell = row1.insertCell();
+                let icon = row.insertCell();
                 cell.innerHTML = heroes[i].name;
+                let imageName = ["background-image:url('", heroes[i].image, "')"]; // on ajoute les icones des personnages dans le style de la page
+                imageName = imageName.join("");
+                icon.style = imageName;
 
             }
 

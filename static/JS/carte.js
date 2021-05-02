@@ -38,6 +38,8 @@ const locations = [
   { lat:  47.22434944289329, lng: -1.62313012459583},
 ];
 
+
+// geocoding -> recherche une adresse sur la map google
 function geocodeAddress(geocoder, resultsMap) {
   const address = document.getElementById("address").value;
   geocoder.geocode({ address: address }, (results, status) => {
@@ -52,3 +54,24 @@ function geocodeAddress(geocoder, resultsMap) {
     }
   });
 }
+
+
+//geolocalisation -> connaitre nos coordonnées
+
+const successCallback = (position) => {
+  console.log(position);
+};
+
+const errorCallback = (error) => {
+  console.log(error);
+};
+
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
+  enableHighAccuracy: true,
+  timeout: 5000
+});
+
+
+
+
+
