@@ -284,3 +284,9 @@ button {
 #searchInput {
     border-radius: 10px;
 }
+
+#btn {
+    position: fixed;
+    top: 230px;
+    left: 1250px;
+}
