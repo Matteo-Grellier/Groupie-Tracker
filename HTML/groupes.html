@@ -1,11 +1,10 @@
 {{ define "body" }}
 
 <div class="tableau">
-   <h1>Groupes</h1>
    <ul id="charactersList"></ul>
 </div>
 <form>
-   <div id="recherche">
+   <div id="sch">
       <input class="input" id="searchInput" type="text" placeholder="Search..." />
       <button type="submit" id="srch">search</button>
       <button type="submit" id="nuke">clear search</button>
@@ -13,18 +12,28 @@
    </div>
 </form>
 
-<div id="myData"></div>
 <script type="module">
-   import { display } from '/static/JS/main.js'
-   display()
+   import { sortTable, clickEvent } from '../static/JS/tri.js'
+   clickEvent()
 </script>
+
+<div id="myData"></div>
+<button type="button" id="btn" >sort</button>
 {{ if .Groupes }}
-<table>
+
+<div id="tab">
    {{range .Groupes}}
-   <tr>
-      <td>{{.ID}}</td>
-   </tr>
+   <div id="cadre">
+
+      <div id ="image" class="result">
+         <img src="{{.Image}}">
+      </div>
+      <div id="name">
+         {{.Name}}
+      </div>
+   </div>
    {{end}}
-</table>
+</div>
+
 {{end}}
 {{end}}

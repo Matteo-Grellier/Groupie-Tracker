@@ -321,45 +321,61 @@ button {
 
 /* Tableau page groupe */
 
-.tableau {
-    padding: 40px;
-    margin: 0 auto;
-    max-width: 1000px;
-    text-align: center;
-    margin-top: 175px;
+#tab {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
 }
 
-#charactersList {
-    padding-inline-start: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
+#tab::-webkit-scrollbar {
+    width: 0;
 }
 
-.character {
-    list-style-type: none;
-    background-color: black;
-    color: white;
-    border-radius: 3px;
-    padding: 10px 20px;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-        'name image';
-    text-align: left;
+#cadre {
+    background-color: blue;
+    color:#fff;
+    font-weight: bold;
+    font-size: 30px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+    height: 550px;
+    width: 350px;
+    border-radius: 10px;
+    margin-top: 370px;
+    margin-left: 20px;
+    
 }
 
-
-.character > h2 {
-    grid-area: name;
-    margin-bottom: 0px;
+#cadre #name {
+    margin: 10px; 
+    display: flex; 
+    justify-content: center; 
 }
 
-.character > img {
-    max-height: 100px;
-    grid-area: image;
+#cadre #image {
+    display: flex;
+    align-items: center;
+    margin: 40px;
+    border-color: #fff;
+    border-radius: 12px;
 }
 
+#image img {
+    position: relative;
+    height: 200px;
+    border-radius: 12px;
+}
+
+#sch {
+    position: fixed;
+    top: 230px;
+    left: 27%;
+}
+
+#searchInput {
+    border-radius: 10px;
+}
+
+<<<<<<< HEAD
   /* la vague */
 .custom-shape-divider-top-1619682806 {
     position: absolute;
@@ -373,3 +389,10 @@ button {
 
 
 
+=======
+#btn {
+    position: fixed;
+    top: 230px;
+    left: 1250px;
+}
+>>>>>>> 39b189057f4136f380a450e6b381cc1585d2397a
