@@ -334,32 +334,29 @@ button {
 /* Tableau page groupe */
 
 #tab {
-    display: flex;
-    align-items: center;
-    overflow-x: scroll;
-}
-
-#tab::-webkit-scrollbar {
-    width: 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 #cadre {
-    background-color: blue;
+    background-color: red;
     color:#fff;
     font-weight: bold;
     font-size: 30px;
     box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
     height: 550px;
-    width: 350px;
+    width: 300px;
+    top: 50px;
     border-radius: 10px;
-    margin-top: 370px;
-    margin-left: 20px;
+    margin-top: 320px;
+    margin-left: 40px;
     
 }
 
 #cadre #name {
     margin: 10px; 
-    display: flex; 
+    display: grid; 
     justify-content: center; 
 }
 
@@ -378,13 +375,14 @@ button {
 }
 
 #sch {
-    position: fixed;
+    position: relative;
     top: 230px;
     left: 27%;
 }
 
 #searchInput {
     border-radius: 10px;
+<<<<<<< HEAD
 }
 
   /* la vague */
@@ -400,3 +398,6 @@ button {
 
 
 
+=======
+}
+>>>>>>> 6389215ea7e92c942b9bba92568ab05605272af7
