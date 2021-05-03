@@ -228,23 +228,32 @@ button {
     background-color: rgb(224, 221, 221);
     width: 100%;
     height: 300px;
-}
-
-#quatre {
     position: absolute;
     align-items: center;
     top: 90%;
+}
+
+#a {
+    position: absolute;
+    align-items: center;
+    top: 10%;
+    left: 85%;
+    font-size: 30px;
+    color: white;
+    text-shadow: 4px 4px rgb(192, 103, 103);
+    height: 100px;
     
 }
 
-.nom {
-    background-color: rgb(128, 24, 24);
+#b {
     position: absolute;
     align-items: center;
-    display: flex;
-}
-#h1 {
-    background-color: rgb(128, 24, 24);
+    bottom: 40%;
+    right: 50%;
+    font-size: 50px;
+    color: white;
+    text-shadow: 4px 4px rgb(192, 103, 103);
+    height: 100px;
 }
 
 /* Carte interactive */
@@ -375,7 +384,6 @@ button {
     border-radius: 10px;
 }
 
-<<<<<<< HEAD
   /* la vague */
 .custom-shape-divider-top-1619682806 {
     position: absolute;
@@ -389,10 +397,3 @@ button {
 
 
 
-=======
-#btn {
-    position: fixed;
-    top: 230px;
-    left: 1250px;
-}
->>>>>>> 39b189057f4136f380a450e6b381cc1585d2397a
