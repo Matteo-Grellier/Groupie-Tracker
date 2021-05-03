@@ -33,10 +33,16 @@
       <input id="address" type="textbox" placeholder="Search concert..." />
       <button id="submit" type="submit" value="Search" >Search</button>
     </div>
-    <div id="concert"> List of concerts</div>
+    <div id="concert"> List of concerts
+      {{ if .Locations }}
+      {{range .Locations}}
+      {{.ID}}
+      {{end}}
+      {{end}}
 
+    </div>
+    
 
-    <script src="/static/JS/carte.js"></script>
 
 
 
