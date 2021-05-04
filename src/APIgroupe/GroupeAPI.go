@@ -48,7 +48,6 @@ func GetAPI() []Groupe {
 		return nil
 	}
 	data, err := ioutil.ReadAll(res.Body)
-	fmt.Println(data)
 	if err != nil {
 		fmt.Println(err)
 		return nil
