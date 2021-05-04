@@ -17,10 +17,10 @@
 
 ## Répartition des tâches
 
-Yann : Filtrage des groupes
+Yann :
 
-Luke : CSS du site, barre de recherche
+Luke : CSS du site, barre de recherche, Filtrage des groupes par nom dates
 
-Nicolas : Récupération des données de l'api
+Nicolas : CSS du site
 
-Matteo : Structure du projet, git, trello, plusieurs pages sur le site
+Matteo : Structure du projet, git, trello, plusieurs pages sur le site, récupération API
