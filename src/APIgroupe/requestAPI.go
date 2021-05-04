@@ -17,6 +17,7 @@ type Groupe struct {
 	Name         string   `json:"name"`
 	CreationDate int      `json:"creationDate"`
 	Members      []string `json: "members"`
+	FirstAlbum   string   `json: "firstAlbum"`
 }
 
 type PageDataGroupe struct {

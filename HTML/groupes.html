@@ -2,7 +2,7 @@
 
 <div class="tableau">
    <ul id="charactersList"></ul>
-</div>
+
 <form>
    <div id="sch">
       <input class="input" id="searchInput" type="text" placeholder="Search..." />
@@ -33,20 +33,19 @@
       <div id ="image" class="result">
          <img src="{{.Image}}">
       </div>
-      <div id="name">
-         <p>Nom du groupe:</p> <br>
-         {{.Name}} <br>
-         <p>{{.CreationDate}}</p> <br>
-         <p> Membres: <br>
-            <br> 
-            {{.Members}}</p> <br>
-         <p> Premier album: <br>
-            {{.FirstAlbum}}</p> <br>
+
+      <div id="info">
+         <div id="name">{{.Name}} </div>
+         <br>
+         <div class="album">Membres: {{.Members}}</div>
+         <br>
+         <div class="creation">{{.CreationDate}}</div>
       </div>
-      <div class="creation">{{.CreationDate}}</div>
    </div>
    {{end}}
+</div>
 </div>
 
 {{end}}
 {{end}}
+     <!-- <div class="album">{{.FirstAlbum}}</div> -->
