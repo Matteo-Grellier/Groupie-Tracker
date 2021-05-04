@@ -12,12 +12,12 @@ import (
 const JSONlocation string = "https://groupietrackers.herokuapp.com/api/locations/1"
 
 type Location struct {
-	Index     string     `json:"id"`
-	Locations []Location `json:"locations"`
+	Index     string   `json:"id"`
+	Locations []string `json:"locations"`
 }
 
 type PageDataLocations struct {
-	Locations []string
+	Locations Location
 }
 
 func CartePage(w http.ResponseWriter, r *http.Request) {
@@ -37,21 +37,20 @@ func CartePage(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func GetAPI() []string {
+func GetAPI() Location {
 
-	var PlaceList []string
+	var PlaceList Location
+
 	res, err := http.Get(JSONlocation)
 	if err != nil {
 		fmt.Println(err)
-		return nil
 	}
 	data, err := ioutil.ReadAll(res.Body)
 	if err != nil {
 		fmt.Println(err)
-		return nil
 	}
-	json.Unmarshal([]byte(data), &PlaceList)
-	fmt.Println(PlaceList)
+	json.Unmarshal(data, &PlaceList)
+
 	return PlaceList
 
 }
