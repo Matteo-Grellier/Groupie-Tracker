@@ -34,7 +34,14 @@
          <img src="{{.Image}}">
       </div>
       <div id="name">
-         {{.Name}}
+         <p>Nom du groupe:</p> <br>
+         {{.Name}} <br>
+         <p>{{.CreationDate}}</p> <br>
+         <p> Membres: <br>
+            <br> 
+            {{.Members}}</p> <br>
+         <p> Premier album: <br>
+            {{.FirstAlbum}}</p> <br>
       </div>
       <div class="creation">{{.CreationDate}}</div>
    </div>

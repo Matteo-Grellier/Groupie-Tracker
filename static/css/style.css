@@ -112,49 +112,151 @@ button {
     background-color: blue;
     color: #fff;
 }
+               /* PAGE PRINCIPALE */
 
 /* Block entier */
 
 #ToutLeBlock {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    background: url(/static/images/band.jpg);
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 300vh;
+    background-image: url(/static/images/band.jpg), url(/static/images/fond.jpg);
+    background-size: 100%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    display: flex, flex;
+    justify-content: center,center;
+    align-items: center,;
 }
 
-
-/* Block gauche */
+/* Block 1 */
 
 .block {
-    display: inline-block;
-    background: blue;
-    width: 50%;
-    height: 500px;
-    color: black;
+    position: relative;
+    bottom: 5%;
+    font-size: 80px;
+    font-family: "gisbon_demodemo";
+    color: white;
+    text-shadow: 4px 4px rgb(192, 103, 103);
+    height: 400px;
+    overflow: hidden;
 }
 
 #un {
-    position: relative;
-    top: 10px;
+    position: absolute;
+    align-items: top;
+    bottom: 75%;
+    left: 30%;
  }
 
-/* Block de droite */
+/* Block 2 */
+
 .block2 {
     display: inline-block;
-    background: pink;
+    background-image: url(/static/images/concert.jpg);
+    background-repeat: no-repeat;
     width: 49%;
     height: 500px;
     color: black;
 }
 
 #deux {
+    position: absolute;
+    align-items: right;
+    bottom: 17%;
+    left: 50%;
+    
+}
+
+/* Block 3 */
+
+.block3 {
+    display: inline-block;
+    background-image: url(/static/images/groupe.jpg);
+    background-repeat: no-repeat;
+    width: 49%;
+    height: 500px;
+    color: black;
+}
+
+#trois {
+    position: absolute;
+    align-items: left;
+    bottom: 35%;
+    right: 46%;
+}
+
+/* Block 4 */
+
+.block4 {
+    display: inline-block;
+    background-color: rgb(224, 221, 221);
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    align-items: center;
+    top: 90%;
+}
+
+/* les texte */
+
+.textes1 {
     position: relative;
-    top: 10px;
-    left: 15px;
+    bottom: 5%;
+    font-size: 30px;
+    color: white;
+    text-shadow: 4px 4px rgb(192, 103, 103);
+    height: 400px;
+    overflow: hidden;
+}
+
+#t1 {
+    position: absolute;
+    align-items: top;
+    bottom: 36%;
+    left: 48%;
+}
+
+.textes2 {
+    position: relative;
+    bottom: 5%;
+    font-size: 30px;
+    color: white;
+    text-shadow: 4px 4px rgb(192, 103, 103);
+    height: 400px;
+    overflow: hidden;
+}
+
+#t2 {
+    position: absolute;
+    align-items: top;
+    bottom: 18%;
+    left: 5%;
+}
+
+
+/* Les balises */
+
+#a {
+    position: absolute;
+    align-items: center;
+    top: 10%;
+    left: 85%;
+    font-size: 30px;
+    color: white;
+    text-shadow: 4px 4px rgb(192, 103, 103);
+    height: 100px;
+    
+}
+
+#b {
+    position: absolute;
+    align-items: center;
+    bottom: 40%;
+    right: 50%;
+    font-size: 50px;
+    color: white;
+    text-shadow: 4px 4px rgb(192, 103, 103);
+    height: 100px;
 }
 
 /* Carte interactive */
@@ -282,25 +384,66 @@ button {
     border-radius: 10px;
 }
 
-/* Bouton sort */
-
-#example {
-    height: 300px;
-    width: 1000px;
-    margin-top : 60px;
-    border-radius: 10px;
-    background-color: blue;
-}
-
-#example .date {
+  /* la vague */
+.custom-shape-divider-top-1619682806 {
     position: absolute;
-    margin-left: 30px;
-    margin-top: 20px;
-    font-size: 20px;
+    bottom: 53%;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    line-height: 0;
 }
 
-#range-box {
-    width: 500px;
-    height: 20px;
-    background-color: red;
+
+#tab {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
 }
+
+#cadre {
+    background-color: red;
+    color:#fff;
+    font-weight: bold;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+    height: 900px;
+    width: 300px;
+    top: 50px;
+    border-radius: 10px;
+    margin-top: 320px;
+    margin-left: 30px;
+    
+}
+
+#cadre #name {
+    margin: 10px; 
+    display: grid; 
+    justify-content: center; 
+}
+
+#cadre #image {
+    display: flex;
+    align-items: center;
+    margin: 40px;
+    border-color: #fff;
+    border-radius: 12px;
+}
+
+#image img {
+    position: relative;
+    height: 200px;
+    border-radius: 12px;
+}
+
+#sch {
+    position: relative;
+    top: 230px;
+    left: 27%;
+}
+
+#searchInput {
+    border-radius: 10px;
+  
