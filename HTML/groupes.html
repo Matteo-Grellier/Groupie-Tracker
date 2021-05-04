@@ -6,17 +6,22 @@
 <form>
    <div id="sch">
       <input class="input" id="searchInput" type="text" placeholder="Search..." />
+      <div id="suggestions"></div>
       <button type="submit" id="srch">search</button>
       <button type="submit" id="nuke">clear search</button>
-      <button type="button" id="btn" >sort</button>
-      <div id="suggestions"></div>
+      <button id="sort"> Sort</button>
+      <div id="example">
+         <div class="date">
+            Date de création <input id="date" type="text" placeholder="Search date..." />
+            <br>
+            Nombres de membres <input id="range-box" type="range" min="0" max="8" step="1"/>
+
+         </div>
+      </div>
    </div>
 </form>
 
-<script type="module">
-   import { sortTable, clickEvent } from '../static/JS/tri.js'
-   clickEvent()
-</script>
+<script src="/static/JS/sort.js"></script>
 
 <div id="myData"></div>
 {{ if .Groupes }}
@@ -31,6 +36,7 @@
       <div id="name">
          {{.Name}}
       </div>
+      <div class="creation">{{.CreationDate}}</div>
    </div>
    {{end}}
 </div>
