@@ -281,3 +281,26 @@ button {
 #searchInput {
     border-radius: 10px;
 }
+
+/* Bouton sort */
+
+#example {
+    height: 300px;
+    width: 1000px;
+    margin-top : 60px;
+    border-radius: 10px;
+    background-color: blue;
+}
+
+#example .date {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#range-box {
+    width: 500px;
+    height: 20px;
+    background-color: red;
+}
