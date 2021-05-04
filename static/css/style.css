@@ -406,14 +406,15 @@ button {
     background-color: red;
     color:#fff;
     font-weight: bold;
+    align-items: center;
     font-size: 30px;
     box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
-    height: 790px;
+    height: 900px;
     width: 300px;
     top: 50px;
     border-radius: 10px;
     margin-top: 320px;
-    margin-left: 60px;
+    margin-left: 30px;
     
 }
 
