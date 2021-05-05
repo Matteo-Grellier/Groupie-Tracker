@@ -9,7 +9,7 @@ h1 {
 }
 
 body {
-    background-color: gray;
+    background-color: rgb(192, 103, 103);
     position: relative;
     min-height: 1000px;
 }
@@ -295,11 +295,15 @@ button {
 
 }
 
+<<<<<<< HEAD
 .fond_map {
     background-image: url(/static/images/fond.jpg);
     background-repeat: repeat;
     width: auto;
     height: auto;
+=======
+.bande1 {
+>>>>>>> 790ef2d1d329c4150aa126845d6c306468eb11ad
 }
 
 /* Tableau page groupe */
