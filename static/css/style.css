@@ -269,42 +269,6 @@ button {
     line-height: 0;
 }
 
-/* //////////////////////////////////////////PAGE CARTE INTERACTIVE ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* Carte interactive -> page carte*/
-
-.map {
-    position: fixed;
-    height: 690px;
-    width: 45%;
-    top: 250px;
-    left: 110px;
-    border-radius: 12px;
-  }
-
-#search_location {
-    position: fixed;
-    top: 250px;
-    width: 20%;
-    left: 1000px;
-    border-radius: 12px;
-
-}
-
-#concert {
-    position: fixed;
-    background-color: #fff;
-    padding: 17px 22px;
-    border-color: black;
-    font-size: 12px;
-    border-radius: 12px;
-    cursor: pointer;
-    outline: none;
-    width: 35%;
-    height: 500px;
-    top: 400px;
-    margin-left: 1000px;
-
-}
 /* //////////////////////////////////////////////PAGE GROUPES ////////////////////////////////////////////////////////////////////////////////////////// */
 /* Tableau page groupe -> page groupes*/
 .tableau {
@@ -319,7 +283,7 @@ button {
 
 /* Les cartes des artistes et groupes -> page groupes */
 #cadre {
-    background: #46CAFF;
+    background: #90DAF0;
     color:black;
     align-items: center;
     font-size: 20px;
@@ -370,12 +334,58 @@ button {
 
 #filtre {
     display: flex;
-    background: #46CAFF;
+    background: #90DAF0;
     height: 400px;
     width: 800px;
-    border-radius: 10px;
+    border-radius: 40px;
     margin-top: 50px;
     border: thick double black;
+    
 }
 
+.choose {
+    margin-left: 30px;
+    margin-top: 20px;
+}
 
+.choose .date {
+    height: 10px;
+    width: 500px;
+}
+
+/* ////////////////////////////////////////// PAGE CARTE INTERACTIVE ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Carte interactive -> page carte*/
+
+.map {
+    position: fixed;
+    height: 690px;
+    width: 45%;
+    top: 250px;
+    left: 110px;
+    border-radius: 12px;
+  }
+
+#search_location {
+    position: fixed;
+    top: 250px;
+    width: 20%;
+    left: 1000px;
+    border-radius: 12px;
+
+}
+
+#concert {
+    position: fixed;
+    background-color: #fff;
+    padding: 17px 22px;
+    border-color: black;
+    font-size: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    outline: none;
+    width: 35%;
+    height: 500px;
+    top: 400px;
+    margin-left: 1000px;
+
+}
