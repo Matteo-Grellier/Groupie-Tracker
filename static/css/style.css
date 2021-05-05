@@ -9,7 +9,7 @@ h1 {
 }
 
 body {
-    background-color: rgb(192, 103, 103);
+    background: linear-gradient(90deg, orange, red);
     position: relative;
     min-height: 1000px;
 }
@@ -295,19 +295,13 @@ button {
 
 }
 
-<<<<<<< HEAD
+
 .fond_map {
-    background-image: url(/static/images/fond.jpg);
-    background-repeat: repeat;
-    width: auto;
-    height: auto;
-=======
-.bande1 {
->>>>>>> 790ef2d1d329c4150aa126845d6c306468eb11ad
+
 }
 
-/* Tableau page groupe */
 
+/* Tableau page groupe */
 
 
 .fond_groupe {
@@ -325,6 +319,7 @@ button {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(5, 1fr);
+    overflow-y: hidden;
 }
 
 #name {
@@ -408,22 +403,6 @@ button {
     overflow: hidden;
     line-height: 0;
 }
-/* ///////////////////////////////////////////////////////// */
-.container {
-    padding: 40px;
-    margin: 0 auto;
-    max-width: 1000px;
-    text-align: center;
-}
-
-#charactersList {
-    padding-inline-start: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
-}
-
-<<<<<<< HEAD
 
 /* Le tableau des groupes */
 
@@ -478,53 +457,3 @@ button {
 #searchInput {
     border-radius: 10px;
 }  
-=======
-.character {
-    list-style-type: none;
-    background-color: #eaeaea;
-    border-radius: 3px;
-    padding: 10px 20px;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-        'name image'
-        'house image';
-    text-align: left;
-}
-
-.character > h2 {
-    grid-area: name;
-    margin-bottom: 0px;
-}
-
-.character > p {
-    grid-area: house;
-    margin: 0;
-    margin-top: -18px;
-}
-
-.character > img {
-    max-height: 100px;
-    grid-area: image;
-}
-
-#searchBar {
-    width: 100%;
-    height: 32px;
-    border-radius: 3px;
-    border: 1px solid #eaeaea;
-    padding: 5px 10px;
-    font-size: 12px;
-}
-
-#searchWrapper {
-    position: relative;
-}
-
-#searchWrapper::after {
-    content: '🔍';
-    position: absolute;
-    top: 7px;
-    right: 15px;
-}
->>>>>>> 17186d8ea88ef7dc3bdb1d244f820f55d72e3dd9
