@@ -1,33 +1,25 @@
 {{define "body"}}
-    
-    <head>
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-      <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    </head>
+
+<div class="fond_map">
+      
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <!-- Script JS -->
+  <script src="/static/JS/carte.js"></script>
+
+  <div class="bande1" id="bande1">
+  <!-- Carte interactive -->
   
-    <!-- Script JS -->
-    <script src="/static/JS/carte.js"></script>
-
-
-   <!-- Carte interactive -->
-   
-   <div id="map" class="map"></div>
+  <div id="map" class="map"></div>
 
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
       async
     ></script>
-
-    <!-- bande sur le coté de la carte -->
-
-    <div class="bande1" id="bande1">
-      <div class="texte1">LIEU</div>
-    </div>
-
-    <div class="bande2" id="bande2">
-      <div class="texte2">CONCERT</div>
-    </div>
 
     <div id="search_location">
       <input id="address" type="textbox" placeholder="Search concert..." />
@@ -41,9 +33,11 @@
       {{end}}
 
     </div>
+  </div>
     
 
 
 
 
-{{end}}
+  {{end}}
+</div>
