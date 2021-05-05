@@ -39,7 +39,6 @@ func CartePage(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetAPI() Location {
-	var tab []Location
 	var PlaceList Location
 	for i := 0; i <= 52; i++ {
 
@@ -52,7 +51,6 @@ func GetAPI() Location {
 			fmt.Println(err)
 		}
 		json.Unmarshal(data, &PlaceList)
-		tab = append(tab, placeList)
 	}
 	return PlaceList
 }
