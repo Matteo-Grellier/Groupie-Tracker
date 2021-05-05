@@ -20,26 +20,6 @@ type Groupe struct {
 	FirstAlbum   string   `json: "firstAlbum"`
 }
 
-// var bucket *gocb.Bucket
-
-// func SearchEndpoint(w http.ResponseWriter, r *http.Request) {
-// 	w.Header().Set("content-type", "application/json")
-// 	params := r.URL.Query()
-// 	query := gocb.NewSearchQuery("groupes", cbft.NewMatchQuery(params.Get("query")))
-// 	query.Fields("artist")
-// 	result, _ := bucket.ExecuteSearchQuery(query)
-// 	var artist []music
-// 	for _, artist := range result.Hits() {
-// 		artist = append(artist, Song{
-// 			Id:     hit.Id,
-// 			Score:  hit.Score,
-// 			Artist: hit.Fields["artist"],
-// 			Title:  hit.Fields["title"],
-// 		})
-// 	}
-// 	json.NewEncoder(w).Encode(hits)
-// }
-
 type PageDataGroupe struct {
 	Groupes []Groupe
 }
