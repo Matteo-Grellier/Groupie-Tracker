@@ -312,7 +312,7 @@ button {
 
 
 #cadre {
-    background: #3660FF;
+    background: #46CAFF;
     color:black;
     align-items: center;
     font-size: 20px;
@@ -358,7 +358,7 @@ button {
 
 #example {
     display: flex;
-    background: #3660FF;
+    background: #46CAFF;
     height: 400px;
     width: 800px;
     border-radius: 10px;
