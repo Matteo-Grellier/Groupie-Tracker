@@ -1,4 +1,5 @@
 {{ define "body" }}
+<<<<<<< HEAD
 <div class="fond_groupe">
    <div class="tableau">
       <ul id="charactersList"></ul>
@@ -52,3 +53,56 @@
    {{end}}
    
 </div>
+=======
+
+<div class="tableau">
+   <ul id="charactersList"></ul>
+
+   <form>
+      <div id="sch">
+         
+         <input class="input" id="searchInput" type="text" placeholder="Search..." />
+         <div id="suggestions"></div>
+         <button type="submit" id="srch">search</button>
+         <button type="submit" id="nuke">clear search</button>
+         <button id="sort"> Sort</button>
+
+         <div id="filtre">
+            <div class="choose">
+               Date de création <input class="date" type="text" placeholder="Search date..." />
+               <br>
+               Nombres de membres 0<input id="range-box" type="range" min="0" max="8" step="1"/> 8
+
+            </div>
+         </div>
+
+      </div>
+   </form>
+
+   {{ if .Groupes }}
+   <div id="tab">
+      {{range .Groupes}}
+      <div id="cadre">
+
+         <div id ="image" class="result">
+            <img src="{{.Image}}">
+         </div>
+
+         <div id="groupe" class="name">{{.Name}} </div>
+         <br>
+         <div id="groupe" class="Membre">Membres: {{.Members}}</div>
+         <br>
+         <div id="groupe" class="creation">Creation date: {{.CreationDate}}</div>
+         <br>
+         <div id="groupe" class="album">First Album: {{.FirstAlbum}}</div>
+      </div>
+      {{end}}
+   </div>
+</div>
+
+<!-- Script JS -->
+<script src="/static/JS/sort.js"></script>
+
+{{end}}
+{{end}}
+>>>>>>> c9293916c6d5937882b254b7ef6bbd9808d76f27

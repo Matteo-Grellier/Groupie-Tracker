@@ -9,12 +9,14 @@ h1 {
 }
 
 body {
-    background: linear-gradient(90deg, orange, red);
+
+    background: linear-gradient(90deg, orange, orangered, red);
     position: relative;
     min-height: 1000px;
+    overflow-x: hidden;
 }
 
-/* Bar de navigation */
+/* /////////////////////////////BAR DE NAVIGATION ///////////////////////////////////////////////////////////////////////////////////////////////////// */
 header {  
     position: fixed;
     top: 0;
@@ -112,9 +114,9 @@ button {
     background-color: blue;
     color: #fff;
 }
-               /* PAGE PRINCIPALE */
+/* ////////////////////////////////////////////////PAGE ACCUEIL ///////////////////////////////////////////////////////////////////////////////////// */
 
-/* Block entier */
+/* Block entier -> page accueil*/
 
 #ToutLeBlock {
     position: relative;
@@ -128,7 +130,7 @@ button {
     align-items: center;
 }
 
-/* Block 1 */
+/* Block 1 -> page accueil*/
 
 .block {
     position: relative;
@@ -148,7 +150,7 @@ button {
     left: 30%;
  }
 
-/* Block 2 */
+/* Block 2 -> page accueil*/
 
 .block2 {
     display: inline-block;
@@ -167,7 +169,7 @@ button {
     
 }
 
-/* Block 3 */
+/* Block 3 -> page accueil*/
 
 .block3 {
     display: inline-block;
@@ -185,7 +187,7 @@ button {
     right: 46%;
 }
 
-/* Block 4 */
+/* Block 4 -> page accueil*/
 
 .block4 {
     display: inline-block;
@@ -197,7 +199,7 @@ button {
     top: 90%;
 }
 
-/* les texte */
+/* les texte -> page accueil*/
 
 .textes1 {
     position: relative;
@@ -233,9 +235,7 @@ button {
     left: 5%;
 }
 
-
 /* Les balises */
-
 #a {
     position: absolute;
     align-items: center;
@@ -259,7 +259,110 @@ button {
     height: 100px;
 }
 
-/* Carte interactive */
+
+/* Vague -> page d'accueil */
+.custom-shape-divider-top-1619682806 {
+    position: absolute;
+    bottom: 53%;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+/* //////////////////////////////////////////////PAGE GROUPES ////////////////////////////////////////////////////////////////////////////////////////// */
+/* Tableau page groupe -> page groupes*/
+.tableau {
+    background: linear-gradient(90deg, lightblue, turquoise);
+
+}
+
+
+
+#tab {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-y: hidden;
+}
+
+
+/* Les cartes des artistes et groupes -> page groupes */
+#cadre {
+    background: #90DAF0;
+    color:black;
+    align-items: center;
+    font-size: 20px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+    height: 900px;
+    width: 300px;
+    top: 50px;
+    border-radius: 10px;
+    margin-top: 320px;
+    margin-left: 30px;
+    border: thick double black;
+    
+}
+#cadre .name {
+    font-weight: bold;
+}
+
+#cadre #groupe {
+    margin: 10px; 
+    display: grid; 
+    justify-content: center; 
+}
+
+#cadre #image {
+    display: flex;
+    align-items: center;
+    margin: 40px;
+    border-color: #fff;
+    border-radius: 12px;
+}
+
+
+#image img {
+    position: relative;
+    height: 200px;
+    border-radius: 12px;
+}
+
+#sch {
+    position: relative;
+    top: 230px;
+    left: 27%;
+}
+
+#searchInput {
+    border-radius: 10px;
+}
+
+#filtre {
+    display: flex;
+    background: #90DAF0;
+    height: 400px;
+    width: 800px;
+    border-radius: 40px;
+    margin-top: 50px;
+    border: thick double black;
+    
+}
+
+
+.choose {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.choose .date {
+    height: 10px;
+    width: 500px;
+}
+
+/* ////////////////////////////////////////// PAGE CARTE INTERACTIVE ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Carte interactive -> page carte*/
 
 .map {
     position: fixed;
@@ -294,166 +397,3 @@ button {
     margin-left: 1000px;
 
 }
-
-
-.fond_map {
-
-}
-
-
-/* Tableau page groupe */
-
-
-.fond_groupe {
-    background-image: url(/static/images/fond.jpg);
-    background-size: 100%;
-    position: relative;
-    width: 100%;
-    height: 100%;
-   
-}
-
-
-
-#tab {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
-    overflow-y: hidden;
-}
-
-#name {
-    position: relative;
-    font-size: 27px;
-    font-family: "gisbon_demodemo";
-    color: white;
-    text-shadow: 4px 4px rgb(192, 103, 103);
-    
-    overflow: hidden;
-}
-
-#cadre {
-    background: linear-gradient(90deg, orange, red);
-    color:black;
-    align-items: center;
-    font-size: 20px;
-    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
-    height: 900px;
-    width: 300px;
-    top: 50px;
-    border-radius: 10px;
-    margin-top: 320px;
-    margin-left: 30px;
-    
-}
-
-#cadre #name {
-    margin: 10px; 
-    display: grid; 
-    justify-content: center; 
-}
-
-#cadre #image {
-    display: flex;
-    align-items: center;
-    margin: 40px;
-    border-color: #fff;
-    border-radius: 12px;
-}
-
-#image img {
-    position: relative;
-    height: 200px;
-    border-radius: 12px;
-}
-
-#sch {
-    position: relative;
-    top: 230px;
-    left: 27%;
-}
-
-#searchInput {
-    border-radius: 10px;
-}
-
-#example {
-    display: flex;
-    background: linear-gradient(90deg,orange, orangered);
-    height: 400px;
-    width: 800px;
-    border-radius: 10px;
-    margin-top: 50px;
-}
-
-#cadre .info {
-    margin: 10px; 
-    display: grid; 
-    justify-content: center;
-}
-
-
-  /* la vague */
-.custom-shape-divider-top-1619682806 {
-    position: absolute;
-    bottom: 53%;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    line-height: 0;
-}
-
-/* Le tableau des groupes */
-
-#tab {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
-}
-
-#cadre {
-    background-color: red;
-    color:#fff;
-    font-weight: bold;
-    align-items: center;
-    font-size: 30px;
-    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
-    height: 900px;
-    width: 300px;
-    top: 50px;
-    border-radius: 10px;
-    margin-top: 320px;
-    margin-left: 30px;
-    
-}
-
-#cadre #name {
-    margin: 10px; 
-    display: grid; 
-    justify-content: center; 
-}
-
-#cadre #image {
-    display: flex;
-    align-items: center;
-    margin: 40px;
-    border-color: #fff;
-    border-radius: 12px;
-}
-
-#image img {
-    position: relative;
-    height: 200px;
-    border-radius: 12px;
-}
-
-#sch {
-    position: relative;
-    top: 230px;
-    left: 27%;
-}
-
-#searchInput {
-    border-radius: 10px;
-}  
