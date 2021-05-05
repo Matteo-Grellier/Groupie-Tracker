@@ -36,7 +36,6 @@ Ce projet consiste a réaliser un site permettant d'afficher et de rechercher de
 
 Notre dossier projet ressemble à ceci :
 
-Arborescence fermer :
 ![img](static/images/IMG_Readme/arborescence.png)
 
 Nous avons :
