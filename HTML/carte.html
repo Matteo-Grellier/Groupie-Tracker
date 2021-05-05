@@ -1,0 +1,41 @@
+{{define "body"}}
+    
+    <head>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+  
+    <!-- Script JS -->
+    <script src="/static/JS/carte.js"></script>
+
+   <!-- Carte interactive -->
+   
+   <div id="map" class="map"></div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+    <div id="search_location">
+      <input id="address" type="textbox" placeholder="Search concert..." />
+      <button id="submit" type="submit" value="Search" >Search</button>
+    </div>
+    <div id="concert"> 
+      List of concerts :
+      <br>
+      <br>
+      {{ if .Locations }}
+      <p>Chainsmokers </p> concert locations: {{.Locations}}
+      {{end}}
+      
+
+    </div>
+  </div>
+    
+
+
+
+
+{{end}}
