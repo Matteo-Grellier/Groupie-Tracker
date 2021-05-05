@@ -146,7 +146,8 @@ button {
     position: absolute;
     align-items: top;
     bottom: 75%;
-    left: 30%;
+    left: 34%;
+    
  }
 
 /* Block 2 -> page accueil*/
@@ -369,7 +370,7 @@ button {
     position: fixed;
     top: 250px;
     width: 20%;
-    left: 1200px;
+    left: 65%;
     border-radius: 12px;
 
 }
@@ -386,7 +387,7 @@ button {
     width: 35%;
     height: 550px;
     top: 400px;
-    margin-left: 1200px;
+    margin-left: 65%;
     border: thick double black;
 
 }
