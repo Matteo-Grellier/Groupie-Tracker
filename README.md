@@ -36,12 +36,12 @@ Ce projet consiste a réaliser un site permettant d'afficher et de rechercher de
 
 Notre dossier projet ressemble à ceci :
 
-![img]()
+Arborescence fermer :
+![img](static/images/IMG_Readme/arborescence.png)
 
 Nous avons :
 
 - un dossier HTML ou l'on met tout nos templates utilisés
--
 - Un dossier src ou l'on met tout nos fichiers GO
 - Un dossier static qui contient :
   - Un dossier css
@@ -52,12 +52,13 @@ Nous avons :
 - Un fichier README.md
 - Un fichier se nommant server.go qui permet de gérer les appels de templates
 
+
 ## Répartition des tâches
 
 Yann : Carte interactive
 
-Luke : CSS, barre de recherche, Filtrage des groupes par nom, dates, Carte interactive
+Luke : CSS navbar, barre de recherche, Filtrage des groupes par nom, dates, Carte interactive
 
-Nicolas : CSS
+Nicolas : CSS,HTML page accueil + tableau de groupes
 
 Matteo : Structure du projet, git, trello, Paginations, récupération API

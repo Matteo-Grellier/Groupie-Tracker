@@ -11,7 +11,7 @@ import (
 
 const JSONartist string = "https://groupietrackers.herokuapp.com/api/artists"
 
-type Groupe struct {
+type Artist struct {
 	ID           int      `json:"id"`
 	Image        string   `json:"image"`
 	Name         string   `json:"name"`
@@ -20,30 +20,30 @@ type Groupe struct {
 	FirstAlbum   string   `json: "firstAlbum"`
 }
 
-type PageDataGroupe struct {
-	Groupes []Groupe
+type PageDataArtist struct {
+	Artists []Artist
 }
 
-func GroupePage(w http.ResponseWriter, r *http.Request) {
+func ArtistPage(w http.ResponseWriter, r *http.Request) {
 
-	groupes := GetAPI()
-	pageGroupes := PageDataGroupe{Groupes: groupes}
-	ts, err := template.ParseFiles("./HTML/layout.html", "./HTML/groupes.html", "./HTML/navbar.html")
+	Artists := GetAPI()
+	pageArtists := PageDataArtist{Artists: Artists}
+	ts, err := template.ParseFiles("./HTML/layout.html", "./HTML/Artists.html", "./HTML/navbar.html")
 	if err != nil {
 		log.Println(err.Error())
 		http.Error(w, "Internal Server Error - PARSING", 500)
 		return
 	}
-	err = ts.Execute(w, pageGroupes)
+	err = ts.Execute(w, pageArtists)
 	if err != nil {
 		log.Println(err.Error())
 		http.Error(w, "Internal Server Error - EXECUTE", 500)
 	}
 }
 
-func GetAPI() []Groupe {
+func GetAPI() []Artist {
 
-	var GroupeList []Groupe
+	var ArtistList []Artist
 	res, err := http.Get(JSONartist)
 	if err != nil {
 		fmt.Println(err)
@@ -54,6 +54,6 @@ func GetAPI() []Groupe {
 		fmt.Println(err)
 		return nil
 	}
-	json.Unmarshal(data, &GroupeList)
-	return GroupeList
+	json.Unmarshal(data, &ArtistList)
+	return ArtistList
 }
