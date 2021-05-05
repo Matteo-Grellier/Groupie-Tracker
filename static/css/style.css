@@ -134,9 +134,9 @@ button {
 .block {
     position: relative;
     bottom: 5%;
-    font-size: 80px;
+    font-size: 150px;
     font-family: "gisbon_demodemo";
-    color: white;
+    color: #fff;
     text-shadow: 4px 4px rgb(192, 103, 103);
     height: 400px;
     overflow: hidden;
@@ -204,8 +204,8 @@ button {
     position: relative;
     bottom: 5%;
     font-size: 30px;
-    color: white;
-    text-shadow: 4px 4px rgb(192, 103, 103);
+    color: rgb(37, 35, 35);
+    text-shadow: 4px 4px rgb(248, 247, 247);
     height: 400px;
     overflow: hidden;
 }
@@ -221,8 +221,8 @@ button {
     position: relative;
     bottom: 5%;
     font-size: 30px;
-    color: white;
-    text-shadow: 4px 4px rgb(192, 103, 103);
+    color: rgb(37, 35, 35);
+    text-shadow: 4px 4px rgb(248, 247, 247);
     height: 400px;
     overflow: hidden;
 }
@@ -359,9 +359,9 @@ button {
 .map {
     position: fixed;
     height: 690px;
-    width: 45%;
+    width: 62%;
     top: 250px;
-    left: 110px;
+    left: 10px;
     border-radius: 12px;
   }
 
@@ -369,7 +369,7 @@ button {
     position: fixed;
     top: 250px;
     width: 20%;
-    left: 1000px;
+    left: 1200px;
     border-radius: 12px;
 
 }
@@ -379,13 +379,18 @@ button {
     background-color: #fff;
     padding: 17px 22px;
     border-color: black;
-    font-size: 12px;
+    font-size: 40px;
     border-radius: 12px;
     cursor: pointer;
     outline: none;
     width: 35%;
-    height: 500px;
+    height: 550px;
     top: 400px;
-    margin-left: 1000px;
+    margin-left: 1200px;
+    border: thick double black;
 
+}
+
+p{
+    font-weight: bold;
 }

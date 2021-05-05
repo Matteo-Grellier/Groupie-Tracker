@@ -9,7 +9,6 @@
     <!-- Script JS -->
     <script src="/static/JS/carte.js"></script>
 
-  <div class="bande1" id="bande1">
    <!-- Carte interactive -->
    
    <div id="map" class="map"></div>
@@ -23,9 +22,12 @@
       <input id="address" type="textbox" placeholder="Search concert..." />
       <button id="submit" type="submit" value="Search" >Search</button>
     </div>
-    <div id="concert"> List of concerts
+    <div id="concert"> 
+      List of concerts :
+      <br>
+      <br>
       {{ if .Locations }}
-          {{.Locations}}
+      <p>Chainsmokers </p> concert locations: {{.Locations}}
       {{end}}
       
 
