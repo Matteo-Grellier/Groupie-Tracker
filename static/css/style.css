@@ -137,7 +137,7 @@ button {
     bottom: 5%;
     font-size: 80px;
     font-family: "gisbon_demodemo";
-    color: white;
+    color: rgb(180, 89, 89);
     text-shadow: 4px 4px rgb(192, 103, 103);
     height: 400px;
     overflow: hidden;
@@ -205,8 +205,8 @@ button {
     position: relative;
     bottom: 5%;
     font-size: 30px;
-    color: white;
-    text-shadow: 4px 4px rgb(192, 103, 103);
+    color: rgb(37, 35, 35);
+    text-shadow: 4px 4px rgb(248, 247, 247);
     height: 400px;
     overflow: hidden;
 }
@@ -222,8 +222,8 @@ button {
     position: relative;
     bottom: 5%;
     font-size: 30px;
-    color: white;
-    text-shadow: 4px 4px rgb(192, 103, 103);
+    color: rgb(37, 35, 35);
+    text-shadow: 4px 4px rgb(248, 247, 247);
     height: 400px;
     overflow: hidden;
 }
