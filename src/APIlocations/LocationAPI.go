@@ -6,18 +6,19 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strconv"
 	"text/template"
 )
 
-const JSONlocation string = "https://groupietrackers.herokuapp.com/api/locations/1"
+const JSONlocation string = "https://groupietrackers.herokuapp.com/api/locations/"
 
 type Location struct {
-	Index     string     `json:"id"`
-	Locations []Location `json:"locations"`
+	Index     string   `json:"id"`
+	Locations []string `json:"locations"`
 }
 
 type PageDataLocations struct {
-	Locations []string
+	Locations Location
 }
 
 func CartePage(w http.ResponseWriter, r *http.Request) {
@@ -37,21 +38,19 @@ func CartePage(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func GetAPI() []string {
+func GetAPI() Location {
+	var PlaceList Location
+	for i := 0; i <= 52; i++ {
 
-	var PlaceList []string
-	res, err := http.Get(JSONlocation)
-	if err != nil {
-		fmt.Println(err)
-		return nil
+		res, err := http.Get(JSONlocation + strconv.Itoa(i))
+		if err != nil {
+			fmt.Println(err)
+		}
+		data, err := ioutil.ReadAll(res.Body)
+		if err != nil {
+			fmt.Println(err)
+		}
+		json.Unmarshal(data, &PlaceList)
 	}
-	data, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		fmt.Println(err)
-		return nil
-	}
-	json.Unmarshal([]byte(data), &PlaceList)
-	fmt.Println(PlaceList)
 	return PlaceList
-
 }
