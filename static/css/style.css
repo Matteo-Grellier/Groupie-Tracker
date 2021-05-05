@@ -15,7 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Bar de navigation */
+/* /////////////////////////////BAR DE NAVIGATION ///////////////////////////////////////////////////////////////////////////////////////////////////// */
 header {  
     position: fixed;
     top: 0;
@@ -113,9 +113,9 @@ button {
     background-color: blue;
     color: #fff;
 }
-/* PAGE PRINCIPALE */
+/* ////////////////////////////////////////////////PAGE ACCUEIL ///////////////////////////////////////////////////////////////////////////////////// */
 
-/* Block entier */
+/* Block entier -> page accueil*/
 
 #ToutLeBlock {
     position: relative;
@@ -129,7 +129,7 @@ button {
     align-items: center;
 }
 
-/* Block 1 */
+/* Block 1 -> page accueil*/
 
 .block {
     position: relative;
@@ -149,7 +149,7 @@ button {
     left: 30%;
  }
 
-/* Block 2 */
+/* Block 2 -> page accueil*/
 
 .block2 {
     display: inline-block;
@@ -168,7 +168,7 @@ button {
     
 }
 
-/* Block 3 */
+/* Block 3 -> page accueil*/
 
 .block3 {
     display: inline-block;
@@ -186,7 +186,7 @@ button {
     right: 46%;
 }
 
-/* Block 4 */
+/* Block 4 -> page accueil*/
 
 .block4 {
     display: inline-block;
@@ -198,7 +198,7 @@ button {
     top: 90%;
 }
 
-/* les texte */
+/* les texte -> page accueil*/
 
 .textes1 {
     position: relative;
@@ -234,9 +234,7 @@ button {
     left: 5%;
 }
 
-
 /* Les balises */
-
 #a {
     position: absolute;
     align-items: center;
@@ -260,7 +258,19 @@ button {
     height: 100px;
 }
 
-/* Carte interactive */
+/* Vague -> page d'accueil */
+.custom-shape-divider-top-1619682806 {
+    position: absolute;
+    bottom: 53%;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+/* //////////////////////////////////////////PAGE CARTE INTERACTIVE ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Carte interactive -> page carte*/
 
 .map {
     position: fixed;
@@ -295,11 +305,8 @@ button {
     margin-left: 1000px;
 
 }
-
-.bande1 {
-}
-
-/* Tableau page groupe */
+/* //////////////////////////////////////////////PAGE GROUPES ////////////////////////////////////////////////////////////////////////////////////////// */
+/* Tableau page groupe -> page groupes*/
 .tableau {
     background: linear-gradient(90deg, lightblue, turquoise);
 }
@@ -310,7 +317,7 @@ button {
     grid-template-columns: repeat(5, 1fr);
 }
 
-
+/* Les cartes des artistes et groupes -> page groupes */
 #cadre {
     background: #46CAFF;
     color:black;
@@ -323,10 +330,14 @@ button {
     border-radius: 10px;
     margin-top: 320px;
     margin-left: 30px;
+    border: thick double black;
     
 }
+#cadre .name {
+    font-weight: bold;
+}
 
-#cadre #name {
+#cadre #groupe {
     margin: 10px; 
     display: grid; 
     justify-content: center; 
@@ -339,6 +350,7 @@ button {
     border-color: #fff;
     border-radius: 12px;
 }
+
 
 #image img {
     position: relative;
@@ -356,92 +368,14 @@ button {
     border-radius: 10px;
 }
 
-#example {
+#filtre {
     display: flex;
     background: #46CAFF;
     height: 400px;
     width: 800px;
     border-radius: 10px;
     margin-top: 50px;
-}
-
-#cadre .info {
-    margin: 10px; 
-    display: grid; 
-    justify-content: center;
+    border: thick double black;
 }
 
 
-  /* la vague */
-.custom-shape-divider-top-1619682806 {
-    position: absolute;
-    bottom: 53%;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    line-height: 0;
-}
-/* ///////////////////////////////////////////////////////// */
-.container {
-    padding: 40px;
-    margin: 0 auto;
-    max-width: 1000px;
-    text-align: center;
-}
-
-#charactersList {
-    padding-inline-start: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
-}
-
-.character {
-    list-style-type: none;
-    background-color: #eaeaea;
-    border-radius: 3px;
-    padding: 10px 20px;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-        'name image'
-        'house image';
-    text-align: left;
-}
-
-.character > h2 {
-    grid-area: name;
-    margin-bottom: 0px;
-}
-
-.character > p {
-    grid-area: house;
-    margin: 0;
-    margin-top: -18px;
-}
-
-.character > img {
-    max-height: 100px;
-    grid-area: image;
-}
-
-#searchBar {
-    width: 100%;
-    height: 32px;
-    border-radius: 3px;
-    border: 1px solid #eaeaea;
-    padding: 5px 10px;
-    font-size: 12px;
-}
-
-#searchWrapper {
-    position: relative;
-}
-
-#searchWrapper::after {
-    content: '🔍';
-    position: absolute;
-    top: 7px;
-    right: 15px;
-}

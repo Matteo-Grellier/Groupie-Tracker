@@ -1,5 +1,5 @@
 let press= document.getElementById("sort");
-let div = document.getElementById("example");
+let div = document.getElementById("filtre");
 
 press.addEventListener('click', () =>{
    if(div.style.display === 'none'){
