@@ -22,6 +22,7 @@
 </form>
 
 <script src="/static/JS/sort.js"></script>
+<script src="/static/JS/main.js"></script>
 
 <div id="myData"></div>
 {{ if .Groupes }}
@@ -39,9 +40,9 @@
          <br>
          <div class="album">Membres: {{.Members}}</div>
          <br>
-         <div class="creation">{{.CreationDate}}</div>
+         <div class="creation">Creation date: {{.CreationDate}}</div>
          <br>
-         <div class="album">{{.FirstAlbum}}</div>
+         <div class="album">First Album: {{.FirstAlbum}}</div>
       </div>
    </div>
    {{end}}
