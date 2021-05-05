@@ -9,9 +9,10 @@ h1 {
 }
 
 body {
-    background-color: rgb(192, 103, 103);
+    background: linear-gradient(90deg, orange, orangered, red);
     position: relative;
     min-height: 1000px;
+    overflow-x: hidden;
 }
 
 /* Bar de navigation */
@@ -300,7 +301,7 @@ button {
 
 /* Tableau page groupe */
 .tableau {
-    background-image: url(/static/images/festival2.jpg)
+    background: linear-gradient(90deg, lightblue, turquoise);
 }
 
 #tab {
@@ -311,7 +312,7 @@ button {
 
 
 #cadre {
-    background: linear-gradient(90deg, orangered, red);
+    background: #3660FF;
     color:black;
     align-items: center;
     font-size: 20px;
@@ -357,7 +358,7 @@ button {
 
 #example {
     display: flex;
-    background: linear-gradient(90deg,orange, orangered);
+    background: #3660FF;
     height: 400px;
     width: 800px;
     border-radius: 10px;
