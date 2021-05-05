@@ -9,7 +9,7 @@ h1 {
 }
 
 body {
-    background-color: gray;
+    background-color: rgb(192, 103, 103);
     position: relative;
     min-height: 1000px;
 }
@@ -296,7 +296,6 @@ button {
 }
 
 .bande1 {
-    background-image: url(/static/images/map.jpg)
 }
 
 /* Tableau page groupe */
